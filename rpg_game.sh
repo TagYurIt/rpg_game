@@ -216,6 +216,7 @@ do
             exit
         fi
     fi
+    sleep 1.5
     clear
     # end of the while loop
 done
