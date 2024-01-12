@@ -1,5 +1,5 @@
 #!/bin/bash
-# Version 2.0
+# Version 2.1
 
 clear
 
@@ -8,8 +8,8 @@ kill=0
 
 echo -e "Choose your class!
 1: Average (\e[1;33m15\e[0m hp / \e[1;31m10\e[0m dmg)
-2: Attack (\e[1;33m10\e[0m hp / \e[1;31m15\e[0m dmg)
-3: Health (\e[1;33m20\e[0m hp / \e[1;31m5\e[0m dmg)"
+2: Fighter (\e[1;33m10\e[0m hp / \e[1;31m15\e[0m dmg)
+3: Tank (\e[1;33m20\e[0m hp / \e[1;31m5\e[0m dmg)"
 
 read -p ">>" class
 
@@ -21,13 +21,13 @@ case $class in
         dmg=10
         ;;
     2)
-        name="Attack"
+        name="Fighter"
         odhp=16
         hp=10
         dmg=15
         ;;
     3)
-        name="Health"
+        name="Tank"
         odhp=26
         hp=20
         dmg=5
