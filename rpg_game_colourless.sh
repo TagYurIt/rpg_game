@@ -1,5 +1,5 @@
 #!/bin/bash
-# Version 2.1
+# Version 2.1.1
 
 clear
 
@@ -216,6 +216,7 @@ do
             exit
         fi
     fi
+    sleep 1.5
     clear
     # end of the while loop
 done
