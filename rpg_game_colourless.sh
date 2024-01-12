@@ -1,15 +1,15 @@
 #!/bin/bash
-# Version 2.0.1
+# Version 2.1
 
 clear
 
 healpot=3
 kill=0
 
-echo -e "Choose your class!
+echo "Choose your class!
 1: Average (15 hp / 10 dmg)
-2: Attack (10 hp / 15 dmg)
-3: Health (20 hp / 5 dmg)"
+2: Fighter (10 hp / 15 dmg)
+3: Tank (20 hp / 5 dmg)"
 
 read -p ">>" class
 
@@ -21,13 +21,13 @@ case $class in
         dmg=10
         ;;
     2)
-        name="Attack"
+        name="Fighter"
         odhp=16
         hp=10
         dmg=15
         ;;
     3)
-        name="Health"
+        name="Tank"
         odhp=26
         hp=20
         dmg=5
@@ -217,6 +217,5 @@ do
         fi
     fi
     clear
-    
     # end of the while loop
 done
