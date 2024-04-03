@@ -1,5 +1,5 @@
 #!/bin/bash
-# Version 2.1.1
+# Version 2.1.2
 
 clear
 
@@ -141,12 +141,11 @@ do
 
     while [[ $beasthp -ge 1 ]]
     do
-
-            echo -e "It has \e[1;33m$beasthp\e[0m health. Attack it or run away? (A/r)"
+        echo -e "It has \e[1;33m$beasthp\e[0m health. Attack it or run away? (A/r)"
         read -p ">>" attack
 
         # Run Away
-            if [[ $attack == r ]]; then
+        if [[ $attack == r ]]; then
             clear
             echo "You killed $kill beasts but you ran away like a little bitch"
             exit
@@ -159,7 +158,7 @@ do
         fi
         if [[ $beasthp -le 0 ]]; then
                 echo -e "You attacked the beast for \e[1;31m$beastphp\e[0m damage."
-            else
+        else
                 echo -e "You attacked the beast for \e[1;31m$dmg\e[0m damage."
         fi
 
