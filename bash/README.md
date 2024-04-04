@@ -6,8 +6,8 @@ This game runs on:
 ✅ MacOS
 ✅ iOS/iPadOS
 ✅ Android
-❓  Windows
-❌  ChromeOS (it is possible, however you need developer mode, if you really want to do this then ask @tagyurit for support)
+❓ Windows
+❌  ChromeOS (it is possible, however you need developer mode)
 `<>` around something means that it is required, its is usually the name of the file you downloaded
 If you need help with anything, ping @tagyurit or @christian012345 in #support for support
 
@@ -23,10 +23,10 @@ openSUSE Tumbleweed
 `sudo zypper install bash`
 Fedora
 `sudo dnf install bash`
-2. Download your choice of the game from <https://github.com/TagYurIt/rpg_game>
-3. Open a terminal where you downloaded the game
-4. (**OPTIONAL**) Run `chmod +x <name of the game>`
-5. Run the game with either `./<name of the game>` or if you didnt give it permissions with step 4 then use `bash <name of the game>`
+3. Download your choice of the game from <https://github.com/TagYurIt/rpg_game>
+4. Open a terminal where you downloaded the game
+5. (**OPTIONAL**) Run `chmod +x <name of the game>`
+6. Run the game with either `./<name of the game>` or if you didnt give it permissions with step 4 then use `bash <name of the game>`
 
 ## macOS
 1. Download the colourless version from <https://github.com/TagYurIt/rpg_game>
