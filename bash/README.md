@@ -71,4 +71,5 @@ Fedora
 ## Windows
 
 Method 1: Install a Linux virtual machine and follow the [Linux instructions](https://github.com/TagYurIt/rpg_game/blob/main/bash/README.md#linux)
+
 Method 2: Use Windows Subsystem for Linux and follow the [Linux instructions](https://github.com/TagYurIt/rpg_game/blob/main/bash/README.md#linux)
