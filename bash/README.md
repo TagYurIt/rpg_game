@@ -2,14 +2,23 @@
 
 ### If you rename the game, please make sure it ends with `.sh`
 This game runs on:
+
 ✅ Linux
+
 ✅ MacOS
+
 ✅ iOS/iPadOS
+
 ✅ Android
+
 ❓ Windows
+
 ❌  ChromeOS (it is possible, however you need developer mode)
+
 `<>` around something means that it is required, its is usually the name of the file you downloaded
+
 If you need help with anything, ping @tagyurit or @christian012345 in #support for support
+
 
 ## Linux
 1. Make sure you have python 3 installed
