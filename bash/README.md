@@ -2,17 +2,18 @@
 ### If you rename the game, please make sure it ends with `.sh`
 This game runs on:
 
-:white_check_mark: Linux
+✅ Linux
 
-:white_check_mark: MacOS
+✅ MacOS
 
-:white_check_mark: iOS/iPadOS
+✅ iOS/iPadOS
 
-:white_check_mark: Android
+✅ Android
 
-:question:  Windows
+❓ Windows
 
-:x:  ChromeOS (it is possible, however you need developer mode)
+❌ ChromeOS (it is possible, however you need developer mode)
+
 `<>` around something means that it is required, its is usually the name of the file you downloaded
 
 ## Linux
