@@ -38,13 +38,13 @@ Fedora
 
 `sudo dnf install bash`
 
-3. Download your choice of the game from <https://github.com/TagYurIt/rpg_game>
+3. Download your choice of the game from <https://github.com/TagYurIt/rpg_game/tree/main/bash>
 4. Open a terminal where you downloaded the game
 5. (**OPTIONAL**) Run `chmod +x <name of the game>`
 6. Run the game with either `./<name of the game>` or if you didnt give it permissions with step 4 then use `bash <name of the game>`
 
 ## macOS
-1. Download the colourless version from <https://github.com/TagYurIt/rpg_game>
+1. Download the colourless version from <https://github.com/TagYurIt/rpg_game/tree/main/bash>
 2.  Open a terminal where you installed the game
 3. (**OPTIONAL**) Run `chmod +x <name of the game>`
 4. Run the game with either `./<name of the game>` or if you didnt give it permissions with step 3 then use `bash <name of the game>`
@@ -52,7 +52,7 @@ Fedora
 ## iOS or iPadOS
 1. Install the app `iSH` from the app store
 2. Install bash with `apk add bash`
-3. Download your choice of the game from <https://github.com/TagYurIt/rpg_game>
+3. Download your choice of the game from <https://github.com/TagYurIt/rpg_game/tree/main/bash>
 4. (**OPTIONAL**) Create a downloads folder in root using the iOS file manager
 4. Move the game to /root/downloads (or just /root if you skipped the last step) in iSH (ask @christian012345 for help if needed)
 5. Run `cd /root/downloads`
