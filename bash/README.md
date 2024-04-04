@@ -2,7 +2,7 @@
 
 ### If you rename the game, please make sure it ends with `.sh`
 This game runs on:
-✅ Linux
+✅ Linux\n
 ✅ MacOS
 ✅ iOS/iPadOS
 ✅ Android
