@@ -2,12 +2,12 @@
 
 ### If you rename the game, please make sure it ends with `.sh`
 This game runs on:
-:white_check_mark: Linux
-:white_check_mark: MacOS
-:white_check_mark: iOS/iPadOS
-:white_check_mark: Android
-:question:  Windows
-:x:  ChromeOS (it is possible, however you need developer mode, if you really want to do this then ask @tagyurit for support)
+✅ Linux
+✅ MacOS
+✅ iOS/iPadOS
+✅ Android
+❓  Windows
+❌  ChromeOS (it is possible, however you need developer mode, if you really want to do this then ask @tagyurit for support)
 `<>` around something means that it is required, its is usually the name of the file you downloaded
 If you need help with anything, ping @tagyurit or @christian012345 in #support for support
 
