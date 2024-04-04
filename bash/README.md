@@ -57,3 +57,18 @@ Fedora
 4. Move the game to /root/downloads (or just /root if you skipped the last step) in iSH (ask @christian012345 for help if needed)
 5. Run `cd /root/downloads`
 6. Run the game with `bash <name of the game>`
+
+## Android
+1. Download F-Droid from <https://f-droid.org/>
+2. Install the app `Termux` from F-Droid
+3. Make sure bash is installed with `pkg install bash`
+4. Download your choice of the game from <https://github.com/TagYurIt/rpg_game>
+5. Use your file manager to open the file with Termux
+6. Move to the folder you installed the game to in with the `cd` command
+7. (**OPTIONAL**) Run `chmod +x <name of the game>`
+8. Run the game with either `./<name of the game>` or if you didnt give it permissions with step 7 then use `bash <name of the game>`
+
+## Windows
+
+Method 1: Install a Linux virtual machine and follow the Linux instructions
+Method 2: Use Windows Subsystem for Linux and follow the Linux instructions
