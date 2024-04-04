@@ -19,19 +19,29 @@ This game runs on:
 ## Linux
 1. Make sure you have bash installed
 Arch Linux
+
 `sudo pacman -S bash`
+
 Debian/Ubuntu
+
 `sudo apt install bash`
+
 Alpine Linux
+
 `apk add bash`
+
 openSUSE Tumbleweed
+
 `sudo zypper install bash`
+
 Fedora
+
 `sudo dnf install bash`
-2. Download your choice of the game from <https://github.com/TagYurIt/rpg_game>
-3. Open a terminal where you downloaded the game
-4. (**OPTIONAL**) Run `chmod +x <name of the game>`
-5. Run the game with either `./<name of the game>` or if you didnt give it permissions with step 4 then use `bash <name of the game>`
+
+3. Download your choice of the game from <https://github.com/TagYurIt/rpg_game>
+4. Open a terminal where you downloaded the game
+5. (**OPTIONAL**) Run `chmod +x <name of the game>`
+6. Run the game with either `./<name of the game>` or if you didnt give it permissions with step 4 then use `bash <name of the game>`
 
 ## macOS
 1. Download the colourless version from <https://github.com/TagYurIt/rpg_game>
