@@ -1,4 +1,4 @@
-# Version 3.0
+# Version 3.0.1
 import random
 
 # Setting constant variables
@@ -40,7 +40,7 @@ while hp > 0:
         # Attack it
         attack = input("It has " + str(beasthp) + " Health. Attack or run away (A/r)\n>>")
         if attack == "r":
-            print("You killed ")
+            print("You ran away like a little bitch.\nYou killed " + str(kill) + " beasts.")
             exit()
         else:
             beasthp = beasthp - dmg
