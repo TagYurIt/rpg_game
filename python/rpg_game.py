@@ -1,4 +1,4 @@
-# Version 3.0.1
+# Version 3.2
 import random
 
 # Setting constant variables
@@ -33,9 +33,43 @@ elif int(classInput) == 3:
     agi = 1
 
 while hp > 0:
+    # List of the scenes and choosing a random one to print
+    scene_list = [
+    "You walk into a forest and find a beast!",
+    "You go into the long grass and find a beast!",
+    "You find a castle. At the door, you are greeted with a beast!",
+    "You are walking through a castle when you found a beast!",
+    "A wild beast appeared!",
+    "You wandered into a cave and a beast appears from around the corner!",
+    "While wandering around a mansion you encounter a beast!",
+    "While looking around in a forest, a beast starts running towards you!",
+    "You find a mansion. At the door, you are greeted by a beast!",
+    "While spelunking you are met with a beast!",
+    "While leaving a forest, a beast runs up from behind you!",
+    "While checking out a cave, you are met with a beast!",
+    "While scouting out an area, you see a beast running towards you!",
+    "You are looking around a dungeon when a beast approaches you!",
+    "You were looking around an abandoned town when you spotted a beast running towards you!",
+    "You were exploring abandoned buildings when you found a beast!",
+    "You were exploring a cave with masks on the wall, and you spotted a beast!",
+    "You killed a beast and out of its corpse comes another beast!",
+    "While exploring the Chernobyl exclusion zone, you encounter a beast!",
+    "You look into the door of an abandoned building, and you are met with a beast!",
+    "You are walking through a cemetery and you encounter a beast!",
+    "You are wandering around the courtyard of a mansion, and you encounter a beast!",
+    "You stumbled upon a building and a beast appeared!",
+    "You investigate the cupboard of an abandoned building, and you find a beast inside!",
+    "You are riding around on your mobility scooter, and you find a beast!",
+    "You found a bunch of peach trees, but then you saw a beast running towards you!",
+    "You fell into a pit and there was a beast!",
+    "You were questioning your life choices when a beast spawned in!",
+    "While you were eating microplastics, a beast appeared!",
+    "While out drinking copious amounts of alcohol you ran into a beast!",
+    "I don't know, here's a beast."]
+    scene = scene_list[random.randint(0, 30)]
     # Generate beast health
     beasthp = random.randint(10, 25)
-    print("You encountered a beast!")
+    print(scene)
     while beasthp > 0:
         # Attack it
         attack = input("It has " + str(beasthp) + " Health. Attack or run away (A/r)\n>>")
@@ -43,10 +77,12 @@ while hp > 0:
             print("You ran away like a little bitch.\nYou killed " + str(kill) + " beasts.")
             exit()
         else:
+            bphp = beasthp
             beasthp = beasthp - dmg
             if beasthp < 0:
                 beasthp = 0
-            print("You hit the beast for " + str(dmg) + ". It now has " + str(beasthp) + " health.")
+            if beasthp > 0:
+                print("You hit the beast for " + str(dmg) + ". It now has " + str(beasthp) + " health.")
 
         # Beasts turn
         if beasthp > 0:
@@ -60,6 +96,8 @@ while hp > 0:
             exit()
         if beasthp == 0:
             kill = kill + 1
+            coins = coins + 1
+            print("You hit the beast for " + str(bphp) + " damage.")
             print("You killed the beast!")
 
     # Healing Script
