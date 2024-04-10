@@ -1,4 +1,4 @@
-# Version 3.1
+# Version 3.1.1
 import random
 
 # Setting constant variables
@@ -86,11 +86,15 @@ while hp > 0:
 
         # Beasts turn
         if beasthp > 0:
+            php = hp
             beastdmg = random.randint(0, 10)
             hp = hp - beastdmg
             if hp < 0:
                 hp = 0
-            print("The beast hit you for " + str(beastdmg) + " damage. You now have " + str(hp) + " health.")
+            if hp > 0:
+                print("The beast hit you for " + str(beastdmg) + " damage. You now have " + str(hp) + " health.")
+            else:
+                print("The beast hit you for " + str(php) + " damage.")
         if hp == 0:
             print("You died.\nYou killed " + str(kill) + " beasts.")
             exit()
