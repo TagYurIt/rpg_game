@@ -1,11 +1,18 @@
-# Version 3.3
-    # We combined 3.2 and 3.3 because fuck you.
+# Version 3.4
+# If you're reading this, I hope youre having a fantastic day!
 import random
 
 # Setting constant variables
 healpot = 3
 kill = 0
 coins = 0
+
+# Difficulty Selection
+print("""Select your difficulty (1-3)
+Easy (Enemies have less health and deal less damage)
+Normal (Enemies have normal health and deal normal damage)
+Hard (Enemies have more health and deal more damage)""")
+diff = input(">>")
 
 # Class selection
 print("""Select your class (1-3)
@@ -45,6 +52,7 @@ while hp > 0:
     elif beast == 100:
         beast_type = 3
         beast_name = "Ricky Berwick" # Fucking run over coat hanger
+
     # List of the scenes and choosing a random one to print
     scene_list = [
     "You walk into a forest and find a " + beast_name + "!",
@@ -82,12 +90,29 @@ while hp > 0:
     print(scene)
 
     # Generate beast health
-    if beast_type == 1:
-        beasthp = random.randint(10, 25)
-    elif beast_type == 2:
-        beasthp = random.randint(15, 30)
-    elif beast_type == 3:
-        beasthp = 1
+    if int(diff) == 1:
+        if beast_type == 1:
+            beasthp = random.randint(10, 20)
+        elif beast_type == 2:
+            beasthp = random.randint(15, 25)
+        elif beast_type == 3:
+            beasthp = 1
+    elif int(diff) == 2:
+        if beast_type == 1:
+            beasthp = random.randint(10, 25)
+        elif beast_type == 2:
+            beasthp = random.randint(15, 30)
+        elif beast_type == 3:
+            beasthp = 1
+    elif int(diff) == 3:
+        if beast_type == 1:
+            beasthp = random.randint(15, 30)
+        elif beast_type == 2:
+            beasthp = random.randint(20, 35)
+        elif beast_type == 3:
+            beasthp = 1
+
+
     while beasthp > 0:
 
         # Attack it
@@ -110,13 +135,29 @@ while hp > 0:
 
         # Beasts turn
         if beasthp > 0:
+            if int(diff) == 1:
+                if beast_type == 1:
+                    beastdmg = random.randint(0, 5)
+                elif beast_type == 2:
+                    beastdmg = random.randint(0, 10)
+                elif beast_type == 3:
+                    beastdmg = random.randint(0, 1)
+            elif int(diff) == 2:
+                if beast_type == 1:
+                    beastdmg = random.randint(0, 10)
+                elif beast_type == 2:
+                    beastdmg = random.randint(5, 15)
+                elif beast_type == 3:
+                    beastdmg = random.randint(0, 1)
+            elif int(diff) == 3:
+                if beast_type == 1:
+                    beastdmg = random.randint(5, 15)
+                elif beast_type == 2:
+                    beastdmg = random.randint(10, 20)
+                elif beast_type == 3:
+                    beastdmg = random.randint(0, 1)
+
             php = hp
-            if beast_type == 1:
-                beastdmg = random.randint(0, 10)
-            elif beast_type == 2:
-                beastdmg = random.randint(5, 15)
-            elif beast_type == 3:
-                beastdmg = random.randint(0, 1)
             hp = hp - beastdmg
             if hp < 0:
                 hp = 0
@@ -133,10 +174,22 @@ while hp > 0:
                 exit()
 
         if beasthp == 0:
-            if beast_type == 1 or beast_type == 3:
-                coins = coins + 1
-            elif beast_type == 2:
-                coins = coins + 2
+            if int(diff) == 1:
+                if beast_type == 2:
+                    coins = coins + 1
+            if int(diff) == 2:
+                if beast_type == 1 or beast_type == 3:
+                    coins = coins +1
+                elif beast_type == 2:
+                    coins = coins + 2
+            if int(diff) == 3:
+                if beast_type == 1:
+                    coins = coins + 2
+                elif beast_type == 2:
+                    coins = coins + 3
+                elif beast_type == 3:
+                    coins = coins + 1
+
             kill = kill + 1
             print("You hit the beast for " + str(bphp) + " damage.")
             print("You killed the beast!")
@@ -154,7 +207,7 @@ while hp > 0:
                 hp = hp + 5
                 if hp >= odhp:
                     if kill == 1:
-                        print("You died because you overdosed from using too many healing potions.\nYou killed " + str(kill) + " beasts.")
+                        print("You died because you overdosed from using too many healing potions.\nYou killed " + str(kill) + " beast.")
                         exit()
                     else:
                         print("You died because you overdosed from using too many healing potions.\nYou killed " + str(kill) + " beasts.")
@@ -179,7 +232,7 @@ while hp > 0:
                         hp = hp + 5
                         if hp >= odhp:
                             if kill == 1:
-                                print("You died because you overdosed from using too many healing potions.\nYou killed " + str(kill) + " beasts.")
+                                print("You died because you overdosed from using too many healing potions.\nYou killed " + str(kill) + " beast.")
                                 exit()
                             else:
                                 print("You died because you overdosed from using too many healing potions.\nYou killed " + str(kill) + " beasts.")
