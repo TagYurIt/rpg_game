@@ -1,5 +1,5 @@
-# Version 3.4
-# If you're reading this, I hope youre having a fantastic day!
+# Version 3.5
+# If you're reading this, I hope you're doing okay, and if youre not, whatever youre going through isn't going to last forever.
 import random
 
 # Setting constant variables
@@ -7,19 +7,32 @@ healpot = 3
 kill = 0
 coins = 0
 
+# Colors
+reset = "\033[0m"
+red = "\033[31m"
+green = "\033[32m"
+yellow = "\033[33m"
+purple = "\033[35m"
+
 # Difficulty Selection
-print("""Select your difficulty (1-3)
-Easy (Enemies have less health and deal less damage)
-Normal (Enemies have normal health and deal normal damage)
-Hard (Enemies have more health and deal more damage)""")
+print("Select your difficulty (1-3)")
+print(green + "Easy" + reset + " (Enemies have less health and deal less damage)")
+print("Normal (Enemies have normal health and deal normal damage)")
+print(red + "Hard" + reset + " (Enemies have more health and deal more damage)")
 diff = input(">>")
+if diff not in ["1", "2", "3"]:
+    diff = 2
 
 # Class selection
-print("""Select your class (1-3)
-Basic (HP:15 | Damage:10 | Tolerance:20)
-Fast (HP:10 | Damage:15 | Tolerance:15)
-Tank (HP:20 | Damage:5 | Tolerance:25)""")
+print("Select your class (1-3)")
+print("Basic (HP:" + green + "15" + reset + " | Damage:" + red + "10" + reset + " | Tolerance:" + purple + "20" + reset + ")")
+print("Fast (HP:" + green + "10" + reset + " | Damage:" + red + "15" + reset + " | Tolerance:" + purple + "15" + reset + ")")
+print("Tank (HP:" + green + "20" + reset + " | Damage:" + red + "5" + reset + " | Tolerance:" + purple + "25" + reset + ")")
 classInput = input(">>")
+if classInput not in ["1", "2", "3"]:
+    classInput = 1
+
+# Theres gotta be a better way to do this without all these print functions
 
 # Applies Stats
 if int(classInput) == 1:
@@ -116,7 +129,7 @@ while hp > 0:
     while beasthp > 0:
 
         # Attack it
-        attack = input("It has " + str(beasthp) + " health. Would you like to Attack, or run away (A/r)\n>>")
+        attack = input("It has " + green + str(beasthp) + reset + " health. Would you like to Attack, or run away (A/r)\n>>")
         if attack == "r":
             if kill == 1:
                 print("You ran away like a little bitch.\nYou killed " + str(kill) + " beast.")
@@ -131,7 +144,7 @@ while hp > 0:
             if beasthp < 0:
                 beasthp = 0
             if beasthp > 0:
-                print("You hit the " + beast_name + " for " + str(dmg) + ". It now has " + str(beasthp) + " health.")
+                print("You hit the " + beast_name + " for " + red + str(dmg) + reset + ". It now has " + green + str(beasthp) + reset + " health.")
 
         # Beasts turn
         if beasthp > 0:
@@ -162,15 +175,15 @@ while hp > 0:
             if hp < 0:
                 hp = 0
             if hp > 0:
-                print("The " + beast_name + " hit you for " + str(beastdmg) + " damage. You now have " + str(hp) + " health.")
+                print("The " + beast_name + " hit you for " + red + str(beastdmg) + reset + " damage. You now have " + green + str(hp) + reset + " health.")
             else:
-                print("The " + beast_name + " hit you for " + str(php) + " damage.")
+                print("The " + beast_name + " hit you for " + red + str(php) + reset + " damage.")
         if hp == 0:
             if kill == 1:
-                print("You died.\nYou killed " + str(kill) + " beast.")
+                print(red + "You died." + reset + "\nYou killed " + str(kill) + " beast.")
                 exit()
             else:
-                print("You died.\nYou killed " + str(kill) + " beasts.")
+                print(red + "You died." + reset + "\nYou killed " + str(kill) + " beasts.")
                 exit()
 
         if beasthp == 0:
@@ -191,12 +204,12 @@ while hp > 0:
                     coins = coins + 1
 
             kill = kill + 1
-            print("You hit the beast for " + str(bphp) + " damage.")
+            print("You hit the beast for " + red + str(bphp) + reset + " damage.")
             print("You killed the beast!")
 
     # Script to go to the store, return to comabat, or heal
     if hp > 0:
-        choice = input("You have " + str(hp) + " health, " + str(healpot) + " healing potions, and " + str(coins) + " coins.\nWould you like to heal, go to the store, or conntinue adventuring?(h/s/B)\n>>")
+        choice = input("You have " + green + str(hp) + reset + " health, " + str(healpot) + " healing potions, and " + yellow + str(coins) + reset + " coins.\nWould you like to heal, go to the store, or conntinue adventuring?(h/s/B)\n>>")
 
         # Healing Script
         if choice == "h":
@@ -213,14 +226,16 @@ while hp > 0:
                         print("You died because you overdosed from using too many healing potions.\nYou killed " + str(kill) + " beasts.")
                         exit()
                 else:
-                    print("You now have " + str(hp) + " health and " + str(healpot) + " healing potions.")
+                    print("You now have " + green + str(hp) + reset + " health and " + str(healpot) + " healing potions.")
 
+        # TODO: Store colors
         # Stoer
+        # print function hell time again yippieeee
         if choice == "s":
-            print("""Welcome to the store, What would you like to buy?(1-3)
-1. Healing potion - Heals 5 damage (3 coins)
-2. Potion of Tolerance - Raises your tolerance by 3 (5 coins)
-3. Sword - Raises your damage by 3 (5 coins)""")
+            print("Welcome to the store, What would you like to buy?(1-3)")
+            print("1. Healing potion - Heals " + green + "5" + reset + " health (" + yellow + "3" + reset + " coins)")
+            print("2. Potion of Tolerance - Raises your tolerance by " + purple + "3" + reset + " (" + yellow + "5" + reset + " coins)")
+            print("3. Sword - Raises your damage by " + red + "3" + reset +" (" + yellow + "5" + reset + " coins)")
             buy = input(">>")
             if buy == "1":
                 if coins >= 3:
@@ -238,21 +253,22 @@ while hp > 0:
                                 print("You died because you overdosed from using too many healing potions.\nYou killed " + str(kill) + " beasts.")
                                 exit()
                         else:
-                            print("You now have " + str(hp) + " health and " + str(healpot) + " healing potions.")
+                            print("You now have " + green + str(hp) + reset + " health and " + str(healpot) + " healing potions.")
                 else:
                     print("You're too fucking poor to afford this.")
             elif buy == "2":
                 if coins >= 5:
                     coins = coins - 5
                     odhp = odhp + 3
-                    print("You drank the potion as soon as you got outside. You now have " + str(odhp) + " tolerance.")
+                    print("You drank the potion as soon as you got outside. You now have " + purple + str(odhp) + reset + " tolerance.")
                 else:
                     print("You're too fucking poor to afford this.")
             elif buy == "3":
                 if coins >= 5:
                     coins = coins - 5
                     dmg = dmg + 3
-                    print("You bought a new sword, you now do " + str(dmg) + " damage.")
+                    print("You bought a new sword, you now do " + red + str(dmg) + reset + " damage.")
                 else:
                     print("You're too fucking poor to afford this.")
                     # This happens when the player goes into the shop too early, and no, we arent gonna make a shop exit "feature"
+                    # penis man lmao
