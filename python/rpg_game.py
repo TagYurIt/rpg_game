@@ -1,4 +1,4 @@
-# Version 3.5
+# Version 3.6
 # If you're reading this, I hope you're doing okay, and if youre not, whatever youre going through isn't going to last forever.
 import random
 
@@ -16,18 +16,18 @@ purple = "\033[35m"
 
 # Difficulty Selection
 print("Select your difficulty (1-3)")
-print(green + "Easy" + reset + " (Enemies have less health and deal less damage)")
-print("Normal (Enemies have normal health and deal normal damage)")
-print(red + "Hard" + reset + " (Enemies have more health and deal more damage)")
+print("1. " + green + "Easy" + reset + " (Enemies have less health and deal less damage)")
+print("2. Normal (Enemies have normal health and deal normal damage)")
+print("3. " + red + "Hard" + reset + " (Enemies have more health and deal more damage)")
 diff = input(">>")
 if diff not in ["1", "2", "3"]:
     diff = 2
 
 # Class selection
 print("Select your class (1-3)")
-print("Basic (HP:" + green + "15" + reset + " | Damage:" + red + "10" + reset + " | Tolerance:" + purple + "20" + reset + ")")
-print("Fast (HP:" + green + "10" + reset + " | Damage:" + red + "15" + reset + " | Tolerance:" + purple + "15" + reset + ")")
-print("Tank (HP:" + green + "20" + reset + " | Damage:" + red + "5" + reset + " | Tolerance:" + purple + "25" + reset + ")")
+print("1. Basic (HP:" + green + "15" + reset + " | Damage:" + red + "10" + reset + " | Tolerance:" + purple + "20" + reset + ")")
+print("2. Fast (HP:" + green + "10" + reset + " | Damage:" + red + "15" + reset + " | Tolerance:" + purple + "15" + reset + ")")
+print("3. Tank (HP:" + green + "20" + reset + " | Damage:" + red + "5" + reset + " | Tolerance:" + purple + "25" + reset + ")")
 classInput = input(">>")
 if classInput not in ["1", "2", "3"]:
     classInput = 1
